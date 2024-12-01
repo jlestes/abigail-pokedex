@@ -8,7 +8,7 @@ export default async function Search({
   searchParams: { [key: string]: string | string[] | undefined };
 }) {
   const name = await searchParams.name;
-  const data = await getPokemon(name);
+  const data = await getPokemon(name as string);
   return (
     <div className="w-full flex flex-col items-center">
       <h1 className="font-bold text-6xl capitalize">{name}</h1>

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 export type Pokemon = {
   sprites: {
@@ -8,6 +7,10 @@ export type Pokemon = {
   weight: number;
   height: number;
   name: string;
+  base_experience: string;
+  cries: {
+    latest: string;
+  };
 };
 
 export function PokemonFullCard({ pokemon }: { pokemon: Pokemon }) {

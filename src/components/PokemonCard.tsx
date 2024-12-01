@@ -8,6 +8,10 @@ export type Pokemon = {
   weight: number;
   height: number;
   name: string;
+  base_experience: string;
+  cries: {
+    latest: string;
+  };
 };
 
 export function PokemonCard({ pokemon }: { pokemon: Pokemon }) {

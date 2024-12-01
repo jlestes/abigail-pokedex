@@ -1,8 +1,6 @@
 import { PokemonCard } from "@/components/PokemonCard";
-import { PokemonList } from "@/components/PokemonList";
-import { getAllPokemon, getPokemon } from "@/utils/api";
+import { getPokemon } from "@/utils/api";
 import Form from "next/form";
-import Link from "next/link";
 
 export default async function Home() {
   const mew = await getPokemon("mew");
