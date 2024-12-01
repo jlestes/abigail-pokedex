@@ -5,9 +5,9 @@ import Link from "next/link";
 export default async function Search({
   searchParams,
 }: {
-  searchParams: { [key: string]: string | string[] | undefined };
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
-  const name = await searchParams.name;
+  const { name } = await searchParams;
   const data = await getPokemon(name as string);
   return (
     <div className="w-full flex flex-col items-center">
